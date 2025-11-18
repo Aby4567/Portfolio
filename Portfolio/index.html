@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kanchenjunga:wght@400;500;600;700&family=Montserrat:wght@400;700&family=Pacifico&family=Roboto:wght@400;700&family=Sacramento&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "HVue6XvmuWe8ODwcd",
+        });
+      })();
+    </script>
+
+    <title>Abinaya | Portfolio</title>
+  </head>
+
+  <body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div><a href="#" class="nav__logo">Abinaya</a></div>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle"><i class="bx bx-menu"></i></div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <!--===== HOME =====-->
+      <section class="home bd-grid" id="home">
+        <div class="home__data">
+          <h1 class="home__title">
+            Hi,<br />
+            I’m <span class="home__title-color">Abinaya</span><br />
+            Web Developer
+          </h1>
+          <a href="Abinaya_CV.pdf" download="assets/Abinaya_Resume.pdf" class="button">Download CV</a>
+        </div>
+
+        <div class="home__social">
+          <a href="https://www.linkedin.com/in/abinayak05" class="home__social-icon">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a href="https://github.com/Aby4567" class="home__social-icon">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="tel:+919751577821" class="home__social-icon">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+
+        <div class="home__img">
+          <svg
+            class="home__blob"
+            viewBox="0 0 479 467"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask id="mask0" mask-type="alpha">
+              <path
+                d="M9.19 145.96C34.02 76.58 114.86 54.73 184.11 29.48C245.8 6.98 311.86 -14.95 370.73 14.14C431.2 44.02 467.94 107.5 477.19 174.31C485.89 237.22 454.93 294.37 416.5 344.95C373.74 401.24 326.06 462.8 255.44 466.18C179.41 469.83 111.55 422.13 65.15 361.8C17.48 299.81 -17.16 219.58 9.19 145.96Z"
+              />
+            </mask>
+            <g mask="url(#mask0)">
+              <path
+                d="M9.19 145.96C34.02 76.58 114.86 54.73 184.11 29.48C245.8 6.98 311.86 -14.95 370.73 14.14C431.2 44.02 467.94 107.5 477.19 174.31C485.89 237.22 454.93 294.37 416.5 344.95C373.74 401.24 326.06 462.8 255.44 466.18C179.41 469.83 111.55 422.13 65.15 361.8C17.48 299.81 -17.16 219.58 9.19 145.96Z"
+              />
+              <image class="home__blob-img" x="50" y="60" href="Abinaya Img" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!--===== ABOUT =====-->
+      <section class="about section" id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about__container bd-grid">
+          <div class="about__img">
+            <img src="img/work1.jpg" alt="About Image" />
+          </div>
+
+          <div>
+            <h2 class="about__subtitle">I'm Abinaya</h2>
+            <p class="about__text">
+              Motivated and enthusiastic B.Tech IT graduate with strong skills in HTML, CSS, Bootstrap,
+              JavaScript, React.js, and MySQL. Passionate about creating responsive and user-friendly
+              websites and constantly learning new technologies. Seeking an opportunity to grow as a
+              Frontend Developer and contribute to impactful projects.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--===== SKILLS =====-->
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills__container bd-grid">
+          <div>
+            <h2 class="skills__subtitle">Professional Skills</h2>
+            <p class="skills__text">
+              Strong foundation in building responsive and interactive web applications. Proficient in
+              modern frontend technologies and continuously learning to enhance technical skills.
+            </p>
+
+            <!-- HTML -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-html5 skills__icon"></i>
+                <span class="skills__name">HTML5</span>
+              </div>
+              <div class="skills__bar skills__html"></div>
+              <span class="skills__percentage">95%</span>
+            </div>
+
+            <!-- CSS -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-css3 skills__icon"></i>
+                <span class="skills__name">CSS3</span>
+              </div>
+              <div class="skills__bar skills__css"></div>
+              <span class="skills__percentage">90%</span>
+            </div>
+
+            <!-- JS -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-javascript skills__icon"></i>
+                <span class="skills__name">JavaScript</span>
+              </div>
+              <div class="skills__bar skills__js"></div>
+              <span class="skills__percentage">85%</span>
+            </div>
+
+            <!-- React -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-react"></i>
+                <span class="skills__name">React JS</span>
+              </div>
+              <div class="skills__bar skills__react"></div>
+              <span class="skills__percentage">80%</span>
+            </div>
+
+            <!-- MySQL -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="fa-solid fa-database"></i>
+                <span class="skills__name">MySQL</span>
+              </div>
+              <div class="skills__bar skills__mysql"></div>
+              <span class="skills__percentage">95%</span>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="fa-brands fa-bootstrap"></i>
+                <span class="skills__name">Bootstrap</span>
+              </div>
+              <div class="skills__bar skills__bootstrap"></div>
+              <span class="skills__percentage">80%</span>
+            </div>
+          </div>
+
+          <div>
+            <img src="img/work2.jpg" alt="Skills Image" class="skills__img" />
+          </div>
+        </div>
+      </section>
+
+      <!--===== PROJECTS =====-->
+      <section class="project section" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project__container bd-grid">
+          <div class="project__item">
+            <img src="img/hotel_Booking.png" alt="Hotel Booking System" class="project__img" />
+            <h3 class="project__title">Hotel Booking System</h3>
+            <p class="project__description">
+              A responsive hotel booking web app built with React.js for seamless user interaction.
+              Includes room booking, amenities showcase, and customer feedback features.
+            </p>
+            <a href="https://github.com/Aby4567/Hotel-booking-website" target="_blank" class="project__button">View Project</a>
+          </div>
+
+          <div class="project__item">
+            <img src="img/Cafe.png" alt="Cafe Royale" class="project__img" />
+            <h3 class="project__title">Cafe Royale</h3>
+            <p class="project__description">
+              A responsive cafe website built using HTML, CSS, and JavaScript. Users can explore menu
+              items and contact the cafe easily through a clean, modern UI.
+            </p>
+            <a href="https://github.com/Aby4567/Cafe_royale" target="_blank" class="project__button">View Project</a>
+          </div>
+
+          <div class="project__item">
+            <img src="img/Cancer.png" alt="Cancer Detection System" class="project__img" />
+            <h3 class="project__title">Cancer Detection System</h3>
+            <p class="project__description">
+              An AI-based system that classifies lung, skin, and blood cancers using medical images. Built
+              with EfficientNet CNN and transfer learning for early diagnosis accuracy.
+            </p>
+            <a href="https://github.com/Aby4567/Cancer-Diagnosis" target="_blank" class="project__button">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <!--===== CONTACT =====-->
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact__container bd-grid">
+          <form class="contact__form">
+            <input type="text" name="name" placeholder="Name" class="contact__input" />
+            <input type="email" name="email" placeholder="Email" class="contact__input" />
+            <textarea name="message" rows="10" class="contact__input" placeholder="Message"></textarea>
+            <input type="button" value="Send" class="contact__button button" />
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+      <p>© 2025 Abinaya. All rights reserved.</p>
+    </footer>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
