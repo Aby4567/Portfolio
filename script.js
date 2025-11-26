@@ -12,21 +12,38 @@ const showMenu = (toggleId, navId) =>{
 showMenu('nav-toggle','nav-menu')
 
 
-const btn = document.querySelector('.contact__button');
-  const form = document.querySelector('.contact__form');
 
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
+btn.addEventListener('click', function(e) {
+  e.preventDefault();
 
-    emailjs.sendForm('service_jqbdbek', 'template_aij910k', form)
-      .then(() => {
-        alert('✅ Message sent successfully!');
-        form.reset();
-      }, (error) => {
-        alert('❌ Failed to send message. Try again!');
-        console.error(error);
-      });
-  });
+  // VALIDATION
+  const name = form.querySelector('input[name="name"]').value.trim();
+  const email = form.querySelector('input[name="email"]').value.trim();
+  const message = form.querySelector('textarea[name="message"]').value.trim();
+
+  if (name === "" || email === "" || message === "") {
+    alert("⚠️ Please fill all fields before sending!");
+    return;
+  }
+
+  // EMAIL VALIDATION
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("⚠️ Please enter a valid email address!");
+    return;
+  }
+
+  // IF VALID → SEND EMAIL
+  emailjs.sendForm('service_jqbdbek', 'template_aij910k', form)
+    .then(() => {
+      alert('✅ Message sent successfully!');
+      form.reset();
+    }, (error) => {
+      alert('❌ Failed to send message. Try again!');
+      console.error(error);
+    });
+});
+
 
 
 /*==================== REMOVE MENU MOBILE ====================*/
@@ -72,3 +89,4 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
