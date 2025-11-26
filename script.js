@@ -13,39 +13,33 @@ showMenu('nav-toggle','nav-menu')
 
 
 // CONTACT FORM VARIABLES
-const btn = document.querySelector('.contact__button');
-const form = document.querySelector('.contact__form');
+const form = document.getElementById("contact-form");
+const result = document.getElementById("result"); 
 
-btn.addEventListener('click', function(e) {
-  e.preventDefault();
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  // VALIDATION
-  const name = form.querySelector('input[name="name"]').value.trim();
-  const email = form.querySelector('input[name="email"]').value.trim();
-  const message = form.querySelector('textarea[name="message"]').value.trim();
+    result.innerHTML = "Sending...";
 
-  if (name === "" || email === "" || message === "") {
-    alert("⚠️ Please fill all fields before sending!");
-    return;
-  }
-
-  // EMAIL VALIDATION
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email)) {
-    alert("⚠️ Please enter a valid email address!");
-    return;
-  }
-
-  // IF VALID → SEND EMAIL
-  emailjs.sendForm('service_jqbdbek', 'template_aij910k', form)
-    .then(() => {
-      alert('✅ Message sent successfully!');
-      form.reset();
-    }, (error) => {
-      alert('❌ Failed to send message. Try again!');
-      console.error(error);
+    // Formspree POST
+    const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
     });
+
+    if (response.ok) {
+        result.innerHTML = "Message sent successfully!";
+        form.reset();
+    } else {
+        result.innerHTML = "Message failed! Please try again.";
+
+        // Optional: Error debugging
+        const errorData = await response.json().catch(() => null);
+        console.log("Formspree error:", errorData);
+    }
 });
+
 
 
 /*==================== REMOVE MENU MOBILE ====================*/
@@ -89,3 +83,4 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
+
